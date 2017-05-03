@@ -1,0 +1,44 @@
+*{
+			box-sizing: border-box;
+		}
+
+		html, body{
+			margin: 0;
+			padding: 0;
+			height: 100%;
+
+		}
+
+		
+
+		#container{
+				position: absolute;
+				display: inline-flex;
+				float: left;
+				top: 0;
+				width: 80%;
+		}
+
+		#canvas{
+
+
+		}
+
+		#instruct{
+
+			width: 20%;
+			float: right;
+			margin-top: 20%;
+			padding: 2%;
+
+
+		}
+		
+
+		.grid{
+			z-index: 1;
+			display: flex;
+			flex-wrap: wrap;
+			height: 100%;
+			width:100%;
+		}

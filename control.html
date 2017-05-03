@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>The Contoller</title>
+
+  <!-- to get rid of favicon request in console -->
+  <link rel="shortcut icon" href="">
+
+
+
+  <!-- Link to style sheet-->
+  <link rel="stylesheet" type="text/css" href="office.css">
+
+
+  <!-- P5 STUFF -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+   <script language="javascript" type="text/javascript" src="control.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script type='text/javascript' src='p5.dom.js'>
+  </script>
+
+
+
+  <!-- SOCKET STUFF -->
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+  <script type="text/javascript">
+
+
+  //ALL MY SOCKET STUFF
+
+   var socket = io.connect();
+    
+    socket.on('connect', function() {
+      console.log("Connected");
+
+  });
+
+  </script>
+
+  <style> body {padding: 0; margin: 0;}</style>
+</head>
+
+<body>
+
+The Controller
+
+
+</body>
+</html>
