@@ -38,19 +38,15 @@
     socket.on('connect', function() {
       console.log("Connected");
 
-      socket.emit('newPlayer');
+      socket.emit('newPlayer', );
     });
 
     socket.on('newPlayer', function(){
-      console.log('Player 2 has Connected');
-
-
-
-      //create a green fighter
-      // otherPlayer = createSprite(width/2,height/2);
+      console.log('Another player has connected');
+     
+      console.log(socket.id);
 
     });
-
 
     //FIGHTER 2's CLIENT VIEW - receive the other person's position
     socket.on('fighter1Pos', function(data){
@@ -58,23 +54,7 @@
 
       //drawOpp(data.x, data.y, data.r, 255, 0, 0);
       opponent.display(data.x,data.y);
-    
-
-
-
-      // otherPlayer.x = data.x;
-      // otherPlayer.y = data.y;
-    });
-
-    socket.on('fighter1RotateLeft', function(data){
-
-    console.log(' Fighter 1 Rotation: ' + data.r);
-
   
-      someRotation = data.r;
-
-
-
     });
 
 

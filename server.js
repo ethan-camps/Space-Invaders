@@ -24,6 +24,21 @@ function requestHandler(req, res) {
   	
 }
 
+// this holdas the players in the game
+var playerSockets = {
+	/*socketId: socketObj*/
+}
+
+var players = {
+	/*socket_id: {
+		playerInfo: {
+			pos:
+			rotation,
+
+		}
+	}*/
+};
+
 // WEBSOCKET PORTION
 
 var io = require('socket.io').listen(httpServer);
@@ -31,14 +46,15 @@ var io = require('socket.io').listen(httpServer);
 io.sockets.on('connection', 
 
 	function (socket) {
-	
+	    
+	    // @TODO
 		console.log("We have a new client: " + socket.id);
 
 		//when someone else connects, we let everyone else know that they're here
 		
-		socket.on('newPlayer', function(){
+		socket.on('newPlayer', function() {
+
 			socket.broadcast.emit('newPlayer');
-			
 		});
 		
 
